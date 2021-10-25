@@ -1,8 +1,9 @@
  {
   "schemaVersion": 2,
   "dockerfileLines": [
-                        "FROM node:12.17.0-alpine",
-"WORKDIR /usr",
+"FROM node:12.17.0-alpine",
+ "RUN mkdir -p /usr/src/app",
+  "WORKDIR /usr/src/app",
 "COPY package.json",
 "COPY tsconfig.json",
 "COPY src ./src",
